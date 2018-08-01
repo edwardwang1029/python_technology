@@ -1,0 +1,27 @@
+### connect to hitbtc cryptocurrency exchange
+### subscribe trade data using straming api
+
+from hitbtc import HitBTC
+import time
+
+def subscribe_trade_data():
+    """
+    WARNING:
+        This method could be used when user want to use streaming live data
+    Do the same job as method self.settle_trigger
+    :return:
+    """
+    ex = HitBTC()
+    ex.start()
+    time.sleep(2.0)
+    ex.subscribe_trades(symbol='BTCUSD')
+    while True:
+        try:
+            data = ex.recv()
+            if data[0] == 'updateTrades':
+                print(data)
+
+        except queue.Empty:
+            continue
+
+subscribe_trade_data()
