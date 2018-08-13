@@ -1,1 +1,5 @@
-"{0:032b}".format(num)
+Convert an int to binary:
+    "{0:032b}".format(num)
+
+Convert a binary to int:
+    int(binary_num, 2)
