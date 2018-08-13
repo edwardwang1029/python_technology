@@ -18,3 +18,11 @@ SELECT class, COUNT(DISTINCT class))
 FROM courses
 GROUP BY class
 ;
+
+###
+| class    | COUNT(student) |
+|----------|----------------|
+| Biology  | 1              |
+| Computer | 1              |
+| English  | 1              |
+| Math     | 6              |
