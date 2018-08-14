@@ -14,7 +14,7 @@ courses:
 +---------+------------+
 
 
-SELECT class, COUNT(DISTINCT class))
+SELECT class, COUNT(DISTINCT student)
 FROM courses
 GROUP BY class
 ;
