@@ -1,0 +1,11 @@
+###Modify sql
+
+UPDATE salary
+SET sex = 
+
+###Conditional filter:
+
+CASE WHEN sex = 'm' THEN 'f'
+ELSE 'm' 
+END
+;
