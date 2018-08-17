@@ -13,11 +13,18 @@ courses:
 | I       | Math       |
 +---------+------------+
 
-
+###
 SELECT class, COUNT(DISTINCT student)
 FROM courses
 GROUP BY class
 ;
+
+
+###
+SELECT class, COUNT(1)
+FROM courses
+GROUP BY class
+；
 
 ###
 | class    | COUNT(student) |
@@ -26,3 +33,5 @@ GROUP BY class
 | Computer | 1              |
 | English  | 1              |
 | Math     | 6              |
+
+
